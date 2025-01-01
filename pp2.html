@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Website 2.
+    </title>
+
+</head>
+<body>
+<h1> FONT  AND BACKGROUND CHANGERS </h1>
+<label> change the environment themes</label>
+<select id="theme" >
+<option value="white"> White </option>
+<option value="black"> Black </option>
+
+
+</select>
+<p> WELCOME TO <p id="xf"> </p> BACKGROUNND </p>
+<script>
+const select=document.querySelector("select")
+const p=document.querySelector("html")
+const para=document.querySelector("#xf")
+ 
+select.addEventListener("change",()=>{
+    const val=select.value
+    if(val==="white")
+ {   p.style.backgroundColor="white"
+p.style.color="black"
+
+para.textContent="WHITE"
+
+}
+if(val==="black")
+{
+    p.style.backgroundColor="black"
+p.style.color="white"
+para.textContent="BLACK"
+}
+
+
+
+
+}
+);
+
+</script>
+
+
+
+
+
+</body>
+</html>
