@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Location
+
+    </title>
+    <style>
+button{
+    height: 100px;
+    width: 110px;
+    border-radius: 20%;
+}
+    </style>
+
+</head>
+<body>
+    <h1> Location </h1>
+   <button onclick="getpos()"> GET LOCATION </button> 
+    <p></p>
+    <script>
+        const para=document.querySelector("p")
+     function getpos()
+     {
+
+try{
+navigator.geolocation.getCurrentPosition(showpos)
+
+}
+catch(err)
+{
+para.textContent="Persmission not given"
+}
+
+
+     }
+     function showpos(name)
+     {
+para.textContent=" Latitude "+" = " + name.coords.latitude  +"     Longitude"+"="+name.coords.longitude;
+
+     }
+    
+    
+    
+    
+    </script>
+
+
+
+</body>
+</html>
