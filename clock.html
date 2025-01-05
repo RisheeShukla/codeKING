@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title> COLOUR CHANGING CLOCK</title>
+</head>
+<style>
+  body{
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+  }
+    h1{
+height: 400px;
+width:400px;
+padding: 2px;
+border: 2px solid black;
+
+border-radius: 50%;
+text-align: center;
+transform:rotate(20deg) 2s 5s;
+ }
+</style>
+<body>
+    <h2><b>Clock Representation</b></h2>
+    <h1 id="para"> </h1>
+<script>
+    setInterval(myfun,1000)
+  function myfun(){
+    let d=new Date()
+    const x=document.querySelector("h1")
+x.textContent=`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+let b=Math.floor(Math.random()*259)
+x.style.backgroundColor=`rgb(${b+55},${b+25},${b+10})`
+
+  }
+
+</script>
+
+
+</body>
+</html>
