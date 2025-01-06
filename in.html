@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Number Field</h2>
+
+
+<img></img>
+
+
+  
+  <input type="url" id="quantity" name="quantity" min="1" max="5">
+  <button onclick="fun()"> submit</button>
+
+<script>
+function fun(){
+const x=document.querySelector("input")
+const  y=x.value
+const img=document.querySelector("img")
+img.src=`${y}`
+}
+</script>
+
+</body>
+</html>
+
